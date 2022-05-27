@@ -1,4 +1,4 @@
-# pixel-seed-data
+# Pixel Seed Data
 
 This repository contains database snapshots that are to be used as seed data for [Pixel](https://github.com/nicholasray/pixel). Since this repo is hosted on github pages, its files can be downloaded via https://nicholasray.github.io/pixel-seed-data/name-of-file.
 
