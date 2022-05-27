@@ -4,7 +4,7 @@ This repository contains database snapshots that are to be used as seed data for
 
 ## Instructions
 
-Let's say you're trying to add a new wiki page to Pixel.
+Let's say you're trying to add a new wiki page to Pixel. You would roughly follow these steps:
 
 1) When Pixel's server is running, go to `localhost:3000/wiki/<your-new-page>`, and click the "Create" tab, etc.
 2) In Pixel's root directory, run `npm run db:save`. This will generate a tar snapshot of the database Pixel uses and save it in a folder called `backups` located in Pixel's root directory.
