@@ -12,4 +12,4 @@ Let's say you're trying to add a new wiki page to Pixel. You would roughly follo
 3) In this repos's folder, commit the tar file (e.g. `database_2022-05-26_13-03-37-0700(PDT).tar.gz`) in this repository. Keep the same file name and **do not remove any of the previous snapshots** in your commit. They may be used by older versions of Pixel.
 4) Push the commit into the main branch of this repo.
 5) Edit Pixel's [seedDb.sh](https://github.com/nicholasray/pixel/blob/b4af39d0be82f6f608e9fb3996b52cb9f924eabe/Dockerfile.database#L5) with the name of this file. Commit this change and create a pull request in Pixel to merge this into Pixel's `main` branch
-6) To make Pixel use the new database snapshot, you will need to run `./pixel.js clean` which recreates the Docker database image
+6) To make Pixel use the new database snapshot, you will need to run `./pixel.js clean` which recreates the Docker database image and downloads the tar file you added to this repo. This file will now be part of the new database image.
