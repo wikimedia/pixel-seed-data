@@ -13,4 +13,4 @@ Let's say you're trying to add a new wiki page to Pixel. You would follow these 
 5) Edit Pixel's [seedDb.sh](https://github.com/wikimedia/pixel/blob/b4af39d0be82f6f608e9fb3996b52cb9f924eabe/Dockerfile.database#L5) file with the name of this file. Commit this change and create a pull request in Pixel to merge this change into Pixel's `main` branch.
 6) After the pull request has been merged, checkout the `main` branch in Pixel and run `./pixel.js update` and then `./pixel.js reference` to rebuild the Docker database image/volume with your changes.
 7) Confirm your database changes are live by visiting the server Pixel sets up at `localhost:3000`.
-8) Pixel runs hourly reports via a cron job at [https://pixel.wmcloud.org/](https://pixel.wmcloud.org/). On the next run, these reports should automatically pull down the latest database image without any manual intervention.
+8) Pixel runs hourly reports via a cron job at [https://pixel.wmcloud.org/](https://pixel.wmcloud.org/). On the next run, Pixel will automatically pull down the latest database image without any manual intervention.
