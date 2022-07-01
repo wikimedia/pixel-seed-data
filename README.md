@@ -12,5 +12,5 @@ Let's say you're trying to add a new wiki page to Pixel. You would follow these 
 4) Drag and drop the `tar` file located in the `backups` directory anywhere on the page at https://github.com/wikimedia/pixel-seed-data. Github will upload the file and ask you to commit it to the main branch of this repo. Click "Commit changes".
 5) Edit Pixel's [seedDb.sh](https://github.com/wikimedia/pixel/blob/b4af39d0be82f6f608e9fb3996b52cb9f924eabe/Dockerfile.database#L5) file with the name of the `tar` file. Commit this change and create a pull request in Pixel to merge this change into Pixel's `main` branch.
 6) After the pull request has been merged, locally checkout the `main` branch in Pixel and run `./pixel.js update` and then `./pixel.js reference` to rebuild the Docker database image/volume with your changes.
-7) Confirm your database changes are live by visiting the server Pixel sets up at `localhost:3000`.
+7) Confirm your database changes are live by running `./pixel.js reference` and visiting the server Pixel sets up at `localhost:3000`.
 8) Pixel runs hourly reports via a cron job at [https://pixel.wmcloud.org/](https://pixel.wmcloud.org/). On the next run, Pixel will automatically pull down the latest database image without any manual intervention if everything is working correctly.
